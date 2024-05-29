@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background-color: #282828;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .App-logo {
@@ -35,4 +38,271 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  background-color: "#2F3B6D";
+}
+
+/* css of topNavBar start */
+.topNavContainer {
+  /* position: absolute; */
+  /* top: 0; */
+}
+.navMother {
+  border-bottom: solid 0.5px black;
+
+  opacity: 0.9;
+}
+.logoText {
+  color: #f9f9f9;
+}
+.navTextContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navTextContainer > * {
+  text-decoration: none;
+  color: #f9f9f9;
+  font-size: small;
+  cursor: pointer;
+}
+.loginBtn {
+  position: relative;
+  top: -5px;
+}
+.selected {
+  color: #2dc22d;
+}
+/* menubar */
+.rightMenu {
+  z-index: 4;
+}
+.rightMenu:hover {
+  cursor: pointer;
+}
+.menubar {
+  z-index: 5;
+  background-color: #2dc22d;
+  height: 0.2rem;
+  margin-bottom: 4px;
+  padding: 1px;
+  width: 2rem;
+  transition: all 1s ease;
+}
+
+.rotateDown {
+  transform: rotate(-45deg) translateY(4px);
+}
+.rotateUp {
+  transform: rotate(45deg) translateY(-5px);
+}
+.menuGroup {
+  background-color: black;
+  color: #f9f9f9;
+  border-radius: 0.1rem;
+  transition: all 3s ease;
+}
+.menuGroupNone {
+  transition: all 1s ease;
+  width: 0;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+}
+
+.menuUp {
+  transform: translateY(-10px);
+}
+.menuGroup > * {
+  text-decoration: none;
+  display: block;
+  color: #f9f9f9;
+  transition: all 1s ease;
+}
+/* css of topNavBar end */
+
+/* css of footer start */
+.footerContainer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* css of footer end */
+
+/* home start */
+.home {
+  height: 4000px;
+}
+.ourFavContainer {
+  background-color: rgb(178, 237, 218);
+}
+.ourFavText {
+  color: rgb(87, 92, 96);
+}
+
+.smallFav:hover {
+  cursor: pointer;
+}
+
+/* hover animation start */
+.homeBoxContainer:hover {
+  cursor: pointer;
+  background-color: linear-gradient(
+    35deg,
+    rgb(0, 0, 46, 0.8),
+    rgba(1, 1, 35, 0)
+  );
+}
+
+.homeBoxContainer:hover .homeBoxImg {
+  opacity: 0.4;
+  background-color: #1b2730;
+}
+.homeBoxText {
+  color: #00abf0;
+  text-indent: 1.1rem;
+
+  /* background-color: #7b7c7d; */
+  /* width: 100%;
+
+  height: 100%; */
+  left: -90%;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.2s ease;
+
+  top: 0;
+}
+.homeBoxContainer:hover .homeBoxText {
+  left: 1px;
+  z-index: 2;
+  position: absolute;
+  opacity: 1;
+}
+.textcontainer {
+  border-left: solid 13px #00abf0;
+  /* background-color: black; */
+  /* width: 100%; */
+}
+
+/* hover animation end */
+
+/* home second div start */
+.searchBtn {
+  color: red;
+  background-color: #61dafb;
+}
+.mealCardContainer {
+}
+.mealCard {
+  margin-top: 20px;
+}
+.mealCard:hover {
+  cursor: pointer;
+  background-color: linear-gradient(
+    35deg,
+    rgb(0, 0, 46, 0.8),
+    rgba(1, 1, 35, 0)
+  );
+}
+.mealCard:hover .mealCardImg {
+  opacity: 0.4;
+  background-color: #1b2730;
+}
+.mealCardText {
+  color: #00abf0;
+  text-indent: 1.1rem;
+  opacity: 0;
+  left: -4%;
+  position: absolute;
+  transition: all 0.5s ease;
+
+  top: 0;
+}
+.mealCard:hover .mealCardText {
+  left: 1px;
+  z-index: 2;
+  opacity: 1;
+  position: absolute;
+}
+/* home second div end */
+
+/* home Third Start */
+.categoryBtnContainer {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.categoryBtn {
+  background-color: #61dafb;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* home Third End */
+
+/* register css start */
+.registerLogo {
+  width: 120px;
+  height: 120px;
+}
+/* register css end */
+
+/* aboug us start */
+.aboutHeader {
+  color: #61dafb;
+}
+
+/* about us end */
+
+/* eachMeal Start */
+.cartfun {
+  cursor: pointer;
+}
+.eachMealImgContainer {
+  height: 500px;
+  overflow: hidden;
+}
+.addToCart {
+  cursor: pointer;
+}
+.tableRow:hover {
+  /* background-color: #00abf0; */
+  cursor: pointer;
+}
+.buyButton:hover {
+  cursor: pointer;
+  /* background-color: #00abf0; */
+}
+.deleteBtn {
+  cursor: pointer;
+}
+/* eachMeal End */
+
+/* responsive start */
+@media (max-width: 1000px) {
+  .textcontainer > * {
+    font-size: small;
+    width: 100%;
+    /* background-color: red; */
+  }
+  .aboutHeadText {
+    font-size: smalls;
+  }
+  .eachMealImgContainer {
+    height: 300px;
+    overflow: hidden;
+  }
+  .categoryBtnContainer {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* responsive End */
 }
